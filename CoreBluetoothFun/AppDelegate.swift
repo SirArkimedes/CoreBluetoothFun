@@ -13,9 +13,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    private let shouldThisDeviceBePeripheral = true
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+
+        if shouldThisDeviceBePeripheral {
+            self.window!.rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "Peripheral View Controller") as! PeripheralViewController
+        } else {
+            self.window!.rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "Central View Controller") as! CentralViewController
+        }
+
+        self.window!.makeKeyAndVisible()
+
         return true
     }
 

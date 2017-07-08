@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		4945A7FA1F107CB100CF8169 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4945A7F91F107CB100CF8169 /* AppDelegate.swift */; };
-		4945A7FC1F107CB100CF8169 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4945A7FB1F107CB100CF8169 /* ViewController.swift */; };
 		4945A7FF1F107CB100CF8169 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4945A7FD1F107CB100CF8169 /* Main.storyboard */; };
 		4945A8011F107CB100CF8169 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4945A8001F107CB100CF8169 /* Assets.xcassets */; };
 		4945A8041F107CB100CF8169 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4945A8021F107CB100CF8169 /* LaunchScreen.storyboard */; };
 		4945A80F1F107CB200CF8169 /* CoreBluetoothFunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4945A80E1F107CB200CF8169 /* CoreBluetoothFunTests.swift */; };
 		4945A81A1F107CB200CF8169 /* CoreBluetoothFunUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4945A8191F107CB200CF8169 /* CoreBluetoothFunUITests.swift */; };
+		4945A8281F107D8C00CF8169 /* CentralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4945A8271F107D8C00CF8169 /* CentralViewController.swift */; };
+		4945A82A1F107DF000CF8169 /* PeripheralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4945A8291F107DF000CF8169 /* PeripheralViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,6 @@
 /* Begin PBXFileReference section */
 		4945A7F61F107CB100CF8169 /* CoreBluetoothFun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreBluetoothFun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4945A7F91F107CB100CF8169 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4945A7FB1F107CB100CF8169 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4945A7FE1F107CB100CF8169 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4945A8001F107CB100CF8169 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4945A8031F107CB100CF8169 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +47,8 @@
 		4945A8151F107CB200CF8169 /* CoreBluetoothFunUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreBluetoothFunUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4945A8191F107CB200CF8169 /* CoreBluetoothFunUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreBluetoothFunUITests.swift; sourceTree = "<group>"; };
 		4945A81B1F107CB200CF8169 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4945A8271F107D8C00CF8169 /* CentralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralViewController.swift; sourceTree = "<group>"; };
+		4945A8291F107DF000CF8169 /* PeripheralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				4945A7F91F107CB100CF8169 /* AppDelegate.swift */,
-				4945A7FB1F107CB100CF8169 /* ViewController.swift */,
+				4945A8271F107D8C00CF8169 /* CentralViewController.swift */,
+				4945A8291F107DF000CF8169 /* PeripheralViewController.swift */,
 				4945A7FD1F107CB100CF8169 /* Main.storyboard */,
 				4945A8001F107CB100CF8169 /* Assets.xcassets */,
 				4945A8021F107CB100CF8169 /* LaunchScreen.storyboard */,
@@ -256,7 +259,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4945A7FC1F107CB100CF8169 /* ViewController.swift in Sources */,
+				4945A8281F107D8C00CF8169 /* CentralViewController.swift in Sources */,
+				4945A82A1F107DF000CF8169 /* PeripheralViewController.swift in Sources */,
 				4945A7FA1F107CB100CF8169 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +423,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZP73CTVZZ8;
 				INFOPLIST_FILE = CoreBluetoothFun/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.andrewrobinson.CoreBluetoothFun;
@@ -432,6 +437,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZP73CTVZZ8;
 				INFOPLIST_FILE = CoreBluetoothFun/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.andrewrobinson.CoreBluetoothFun;
