@@ -31,7 +31,6 @@ class PeripheralViewController: UIViewController {
         successImageView.tintColor = .clear
 
         peripheralManager = CBPeripheralManager(delegate: self, queue: nil)
-        peripheralManager.startAdvertising([CBAdvertisementDataServiceUUIDsKey: [cbIDTransfer]])
     }
 
     private func sendData() {
@@ -86,6 +85,8 @@ extension PeripheralViewController: CBPeripheralManagerDelegate {
 
     func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
         if peripheral.state == .poweredOn {
+            peripheralManager.startAdvertising([CBAdvertisementDataServiceUUIDsKey: [cbIDTransfer]])
+            
             transferCharacteristic = CBMutableCharacteristic(type: cbIDCharacteristic, properties: .notify, value: nil, permissions: .readable)
 
             let service = CBMutableService(type: cbIDTransfer, primary: true)
