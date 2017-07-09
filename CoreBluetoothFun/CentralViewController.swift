@@ -88,6 +88,8 @@ extension CentralViewController: CBCentralManagerDelegate, CBPeripheralDelegate 
 
         view.backgroundColor = foundColor
 
+        data = NSMutableData(length: 0)
+
         central.stopScan()
         peripheral.delegate = self
         peripheral.discoverServices([cbIDTransfer])
